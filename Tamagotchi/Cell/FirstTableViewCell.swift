@@ -8,10 +8,12 @@
 import UIKit
 import SnapKit
 
-class MainTableViewCell: UITableViewCell {
+class FirstTableViewCell: UITableViewCell {
+    
     let deviceWidth = UIScreen.main.bounds.size.width
     var data: [String: String] = [:]
     var count: Int = 0
+    weak var delegate: FirstTableViewCellDelegate?
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -30,7 +32,7 @@ class MainTableViewCell: UITableViewCell {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(MainCollectionViewCell.self, forCellWithReuseIdentifier: MainCollectionViewCell.identifier)
+        collectionView.register(FirstCollectionViewCell.self, forCellWithReuseIdentifier: FirstCollectionViewCell.identifier)
         
         
     }
@@ -41,13 +43,13 @@ class MainTableViewCell: UITableViewCell {
     
 }
 
-extension MainTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension FirstTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainCollectionViewCell.identifier, for: indexPath) as! MainCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FirstCollectionViewCell.identifier, for: indexPath) as! FirstCollectionViewCell
         
         if count == 1 {
             let keys = Array(data.keys)
@@ -77,5 +79,12 @@ extension MainTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let keys = Array(data.keys)
+        let key = keys[indexPath.row]
+        let value = data[key]!
+        delegate?.didSelectView(data: [key: value])
     }
 }

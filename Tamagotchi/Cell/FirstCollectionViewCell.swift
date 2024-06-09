@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainCollectionViewCell: UICollectionViewCell {
+class FirstCollectionViewCell: UICollectionViewCell {
     
     let deviceWidth = UIScreen.main.bounds.size.width
     
@@ -57,7 +57,7 @@ class MainCollectionViewCell: UICollectionViewCell {
         
         imageView.setImageViewUI(contentMode: .scaleAspectFill, cornerRadius: (((deviceWidth - 80) / 3) - 10)/2)
         nameView.setViewUI(backgroundColor: .clear, cornerRadius: 3, borderColor: UIColor.darkGray.cgColor, borderWidth: 1)
-        nameLabel.setUILabel("", textAlignment: .center, color: .black, backgroundColor: .clear, font: .systemFont(ofSize: 13), cornerRadius: 0)
+        nameLabel.setUILabel("", textAlignment: .center, color: .black, backgroundColor: .clear, font: .systemFont(ofSize: 13), cornerRadius: 0, numberLine: 0)
     }
     
     func configureData(data: [String:String]) {
