@@ -69,7 +69,7 @@ extension MainViewController {
         
         navigationItem.hidesBackButton = true
         
-        let userButton = UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .plain, target: self, action: #selector(userButtonClicked))
+        let userButton = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(userButtonClicked))
         navigationItem.rightBarButtonItem = userButton
     }
     
@@ -190,7 +190,9 @@ extension MainViewController {
         riceStackView.distribution = .fillProportionally
         riceStackView.spacing = 10
         
-        riceTextField.backgroundColor = .cyan
+        riceTextField.backgroundColor = .clear
+        riceTextField.placeholder = "밥주세용"
+        riceTextField.textAlignment = .center
         
         riceButton.setButtonUI(title: "밥먹기", font: .systemFont(ofSize: 14), titleColor: .black, backgroundColor: .white, cornerRadius: 5, borderWidth: 1, borderColor: UIColor.black.cgColor, tagNum: 0)
         
@@ -201,7 +203,9 @@ extension MainViewController {
         waterStackView.distribution = .fillProportionally
         waterStackView.spacing = 10
         
-        waterTextField.backgroundColor = .cyan
+        waterTextField.backgroundColor = .clear
+        waterTextField.placeholder = "물주세용"
+        waterTextField.textAlignment = .center
         
         waterButton.setButtonUI(title: "물먹기", font: .systemFont(ofSize: 14), titleColor: .black, backgroundColor: .white, cornerRadius: 5, borderWidth: 1, borderColor: UIColor.black.cgColor, tagNum: 0)
         
@@ -215,30 +219,8 @@ extension MainViewController {
     }
     
     @objc func userButtonClicked() {
-        
-        
+        let vc = SettingViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-
-#if DEBUG
-
-import SwiftUI
-
-struct ViewControllerPresentable: UIViewControllerRepresentable{
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-    }
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        MainViewController()
-    }
-}
-
-struct ViewControllerPrepresentable_PreviewProvider : PreviewProvider{
-    static var previews: some View{
-        ViewControllerPresentable()
-    }
-}
-
-#endif
