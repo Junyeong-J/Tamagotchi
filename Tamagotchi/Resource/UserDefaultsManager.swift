@@ -13,7 +13,7 @@ class UserDefaultsManager {
     private init() {}
     
     let nicknameForKey = "nickname"
-    
+    let user = "isUser"
     var nickname: String? {
         get {
             guard let nickname = UserDefaults.standard.string(forKey: nicknameForKey) else {
@@ -24,6 +24,17 @@ class UserDefaultsManager {
         set {
             UserDefaults.standard.set(newValue, forKey: nicknameForKey)
         }
+    }
+    
+    var isUser: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: user)
+        }
+        
+        set {
+            UserDefaults.standard.set(true, forKey: user)
+        }
+        
     }
     
 }
