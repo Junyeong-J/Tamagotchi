@@ -11,24 +11,32 @@ import SnapKit
 class FirstViewController: UIViewController {
     
     let deviceWidth = UIScreen.main.bounds.size.width
-    let data = ["따끔따끔 다마고치":"1-7", "방실방실 다마고치":"2-7", "반짝반짝 다마고치":"3-7"]
-    let noData = ["준비중이에요": "noImage"]
     
-    let tableView = UITableView()
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
     
+    func collectionViewLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewFlowLayout()
+        let sectionSpacing: CGFloat = 20
+        let cellSpacing: CGFloat = 16
+        let width = UIScreen.main.bounds.width - (sectionSpacing * 2) - (cellSpacing * 3)
+        layout.itemSize = CGSize(width: width/3, height: width/3 * 1.3)
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = cellSpacing
+        layout.minimumInteritemSpacing = cellSpacing
+        layout.sectionInset = UIEdgeInsets(top: sectionSpacing, left: sectionSpacing, bottom: sectionSpacing, right: sectionSpacing)
+        return layout
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "다마고치 선택하기"
         
-        view.backgroundColor = .white
-        
         configureHierarchy()
         configureLayout()
         configureUI()
         
-        configureTableView()
+        configureCollectionView()
     }
     
 }
@@ -44,45 +52,46 @@ extension FirstViewController {
     }
     
     func configureUI() {
-        
+        view.backgroundColor = .white
     }
     
-    func configureTableView() {
-        view.addSubview(tableView)
+    func configureCollectionView() {
+        view.addSubview(collectionView)
         
-        tableView.rowHeight = ((deviceWidth - 80) / 3) * 1.4 + 10
-        tableView.snp.makeConstraints { make in
+        collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(FirstTableViewCell.self, forCellReuseIdentifier: FirstTableViewCell.identifier)
-        
-        tableView.separatorStyle = .none
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(SelectCollectionViewCell.self, forCellWithReuseIdentifier: SelectCollectionViewCell.identifier)
+
     }
     
 }
 
-extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: FirstTableViewCell.identifier, for: indexPath) as! FirstTableViewCell
-        cell.backgroundColor = .white
-        if indexPath.row == 0{
-            cell.data = data
-            cell.count = 1
-            cell.delegate = self
-        } else {
-            cell.data = noData
-            cell.count = 2
-            cell.delegate = self
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SelectCollectionViewCell.identifier, for: indexPath) as! SelectCollectionViewCell
+        let tamagotchi: TamagotchiData
+        switch indexPath.item {
+        case 0:
+            tamagotchi = .cactus
+        case 1:
+            tamagotchi = .sun
+        case 2:
+            tamagotchi = .star
+        default:
+            tamagotchi = .prepare
         }
+        cell.configureData(tamagotchi: tamagotchi)
         return cell
     }
+    
     
 }
 

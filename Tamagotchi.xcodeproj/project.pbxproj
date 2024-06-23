@@ -14,8 +14,6 @@
 		72070FC52C143BC600DEB707 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FC42C143BC600DEB707 /* FirstViewController.swift */; };
 		72070FC92C143C8600DEB707 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 72070FC82C143C8600DEB707 /* SnapKit */; };
 		72070FCC2C143E4A00DEB707 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FCB2C143E4A00DEB707 /* ReuseIdentifierProtocol.swift */; };
-		72070FCF2C143EA900DEB707 /* FirstCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FCE2C143EA900DEB707 /* FirstCollectionViewCell.swift */; };
-		72070FD12C14456500DEB707 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD02C14456500DEB707 /* FirstTableViewCell.swift */; };
 		72070FD42C146F7A00DEB707 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD32C146F7A00DEB707 /* UILabel+Extension.swift */; };
 		72070FD62C146FDE00DEB707 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD52C146FDE00DEB707 /* UIImageView+Extension.swift */; };
 		72070FD82C1470C600DEB707 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD72C1470C600DEB707 /* UIView+Extension.swift */; };
@@ -33,6 +31,9 @@
 		72154C942C2860D200EEF679 /* TextFieldPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C932C2860D200EEF679 /* TextFieldPlaceholder.swift */; };
 		72154C962C28636200EEF679 /* NicknameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C952C28636200EEF679 /* NicknameError.swift */; };
 		72154C992C28642C00EEF679 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 72154C982C28642C00EEF679 /* Toast */; };
+		72154C9B2C28804300EEF679 /* SelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C9A2C28804300EEF679 /* SelectCollectionViewCell.swift */; };
+		72154C9D2C28810500EEF679 /* TamagotchiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C9C2C28810500EEF679 /* TamagotchiImage.swift */; };
+		72154C9F2C2882AF00EEF679 /* TamagotchiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C9E2C2882AF00EEF679 /* TamagotchiData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +45,6 @@
 		72070FBE2C14389D00DEB707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72070FC42C143BC600DEB707 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		72070FCB2C143E4A00DEB707 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
-		72070FCE2C143EA900DEB707 /* FirstCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCollectionViewCell.swift; sourceTree = "<group>"; };
-		72070FD02C14456500DEB707 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
 		72070FD32C146F7A00DEB707 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		72070FD52C146FDE00DEB707 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		72070FD72C1470C600DEB707 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -62,6 +61,9 @@
 		72154C912C28606800EEF679 /* NicknameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameTextField.swift; sourceTree = "<group>"; };
 		72154C932C2860D200EEF679 /* TextFieldPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPlaceholder.swift; sourceTree = "<group>"; };
 		72154C952C28636200EEF679 /* NicknameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameError.swift; sourceTree = "<group>"; };
+		72154C9A2C28804300EEF679 /* SelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		72154C9C2C28810500EEF679 /* TamagotchiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiImage.swift; sourceTree = "<group>"; };
+		72154C9E2C2882AF00EEF679 /* TamagotchiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +139,7 @@
 		72070FCD2C143E6100DEB707 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				72070FD02C14456500DEB707 /* FirstTableViewCell.swift */,
-				72070FCE2C143EA900DEB707 /* FirstCollectionViewCell.swift */,
+				72154C9A2C28804300EEF679 /* SelectCollectionViewCell.swift */,
 				7207105C2C19E23C00DEB707 /* SettingTableViewCell.swift */,
 			);
 			path = Cell;
@@ -159,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				7207105E2C19ECF500DEB707 /* Setting.swift */,
+				72154C9E2C2882AF00EEF679 /* TamagotchiData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				72154C912C28606800EEF679 /* NicknameTextField.swift */,
+				72154C9C2C28810500EEF679 /* TamagotchiImage.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -276,8 +279,10 @@
 				72070FD82C1470C600DEB707 /* UIView+Extension.swift in Sources */,
 				7207105B2C19E19C00DEB707 /* SettingViewController.swift in Sources */,
 				7207105F2C19ECF500DEB707 /* Setting.swift in Sources */,
+				72154C9B2C28804300EEF679 /* SelectCollectionViewCell.swift in Sources */,
 				7207105D2C19E23C00DEB707 /* SettingTableViewCell.swift in Sources */,
 				72154C922C28606800EEF679 /* NicknameTextField.swift in Sources */,
+				72154C9D2C28810500EEF679 /* TamagotchiImage.swift in Sources */,
 				72070FB12C14389C00DEB707 /* AppDelegate.swift in Sources */,
 				72070FDE2C1589A500DEB707 /* UIButton+Extension.swift in Sources */,
 				72070FDA2C15790000DEB707 /* PopUpViewController.swift in Sources */,
@@ -286,9 +291,8 @@
 				72154C8C2C285B6600EEF679 /* UserDefaultsManager.swift in Sources */,
 				72070FB32C14389C00DEB707 /* SceneDelegate.swift in Sources */,
 				72154C942C2860D200EEF679 /* TextFieldPlaceholder.swift in Sources */,
-				72070FD12C14456500DEB707 /* FirstTableViewCell.swift in Sources */,
-				72070FCF2C143EA900DEB707 /* FirstCollectionViewCell.swift in Sources */,
 				72154C8F2C285E0F00EEF679 /* NaviTitle.swift in Sources */,
+				72154C9F2C2882AF00EEF679 /* TamagotchiData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
