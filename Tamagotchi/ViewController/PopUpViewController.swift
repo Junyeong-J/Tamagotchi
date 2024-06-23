@@ -14,6 +14,7 @@ class PopUpViewController: UIViewController {
     let deviceheight = UIScreen.main.bounds.size.height
     
     var data: TamagotchiData?
+    let ud = UserDefaultsManager.shared
     
     let popUpView = UIView()
     
@@ -123,7 +124,7 @@ extension PopUpViewController {
         
         nameView.setViewUI(backgroundColor: .white, cornerRadius: 5, borderColor: UIColor.black.cgColor, borderWidth: 1)
         
-        nameLabel.text = "ㅎㅎㅎ"
+        nameLabel.text = ""
         
         stackView.spacing = 10
         stackView.alignment = .center
@@ -160,7 +161,17 @@ extension PopUpViewController {
     }
     
     @objc func startButtonClicked() {
-        let vc = MainViewController()
-        navigationController?.pushViewController(vc, animated: false)
+        if let data = data {
+            ud.tamagotchiImage = data.setImage
+            ud.tamagotchiName = data.name
+            ud.isUser = true
+        }
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        let sceneDelegate = windowScene?.delegate as? SceneDelegate
+        
+        let mainVC = MainViewController()
+        let rootViewController = UINavigationController(rootViewController: mainVC)
+        sceneDelegate?.window?.rootViewController = rootViewController
+        sceneDelegate?.window?.makeKeyAndVisible()
     }
 }

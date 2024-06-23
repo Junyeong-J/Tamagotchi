@@ -37,6 +37,19 @@ enum TamagotchiData: CaseIterable {
         }
     }
     
+    var setImage: String {
+        switch self {
+        case .cactus:
+            return "1-1"
+        case .sun:
+            return "2-1"
+        case .star:
+            return "3-1"
+        case .prepare:
+            return "noImage"
+        }
+    }
+    
     var explain: String {
         switch self {
         case .cactus:
