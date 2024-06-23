@@ -13,7 +13,7 @@ class PopUpViewController: UIViewController {
     let deviceWidth = UIScreen.main.bounds.size.width
     let deviceheight = UIScreen.main.bounds.size.height
     
-    var data: [String: String] = [:]
+    var data: TamagotchiData?
     
     let popUpView = UIView()
     
@@ -143,10 +143,10 @@ extension PopUpViewController {
     }
     
     func setDataUI() {
-        if let key = data.keys.first, let imageName = data[key] {
-            nameLabel.text = key
-            imageView.image = UIImage(named: imageName)
-            explainLabel.text = "저는 \(key)입니당 키는 100km\n몸무게는 150톤이에용\n성격은 화끈하고 날라다닙니당~!\n열심히 잘먹고 잘 클 자신은\n있답니당 방실방실!"
+        if let tamagotchiImage = data?.image, let name = data?.name, let explain = data?.explain{
+            imageView.image = UIImage(named: tamagotchiImage)
+            nameLabel.text = name
+            explainLabel.text = explain
         }
     }
     

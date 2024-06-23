@@ -37,4 +37,17 @@ enum TamagotchiData: CaseIterable {
         }
     }
     
+    var explain: String {
+        switch self {
+        case .cactus:
+            return "저는 \(name)입니당 키는 2cm\n몸무게는 150g이에용\n성격은 소심하지만 마음은 따듯해요.\n열심히 잘먹고 잘 클 자신은 있답니당\n 반가워요 주인님!"
+        case .sun:
+            return "저는 \(name)입니당 키는 100km\n몸무게는 150톤이에용\n성격은 화끈하고 날라다닙니당~!\n열심히 잘먹고 잘 클 자신은\n있답니당 방실방실!"
+        case .star:
+            return "저는 \(name)입니당 키는 100m\n몸무게는 1톤이에용\n성격은 차갑고 남들에겐 빛이 납니당~!\n열심히 잘먹고 잘 클 자신은 있답니당\n 반짝반짝!"
+        case .prepare:
+            return ""
+        }
+    }
+    
 }

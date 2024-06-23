@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Toast
 
 class FirstViewController: UIViewController {
     
@@ -92,15 +93,27 @@ extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     
-    
-}
-
-extension FirstViewController: FirstTableViewCellDelegate {
-    func didSelectView(data: [String : String]) {
-        let vc = PopUpViewController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .overCurrentContext
-        vc.data = data
-        self.present(nav, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.item < 3 {
+            let vc = PopUpViewController()
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .overCurrentContext
+            let tamagotchi: TamagotchiData
+            switch indexPath.item {
+            case 0:
+                tamagotchi = .cactus
+            case 1:
+                tamagotchi = .sun
+            case 2:
+                tamagotchi = .star
+            default:
+                tamagotchi = .prepare
+            }
+            vc.data = tamagotchi
+            self.present(nav, animated: true)
+        } else {
+            self.view.makeToast("준비중입니다.")
+        }
     }
+    
 }

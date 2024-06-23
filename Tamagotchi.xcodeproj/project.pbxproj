@@ -18,7 +18,6 @@
 		72070FD62C146FDE00DEB707 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD52C146FDE00DEB707 /* UIImageView+Extension.swift */; };
 		72070FD82C1470C600DEB707 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD72C1470C600DEB707 /* UIView+Extension.swift */; };
 		72070FDA2C15790000DEB707 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FD92C15790000DEB707 /* PopUpViewController.swift */; };
-		72070FDC2C157C3D00DEB707 /* SelectPushViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FDB2C157C3D00DEB707 /* SelectPushViewProtocol.swift */; };
 		72070FDE2C1589A500DEB707 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FDD2C1589A500DEB707 /* UIButton+Extension.swift */; };
 		72070FE02C15964900DEB707 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72070FDF2C15964900DEB707 /* MainViewController.swift */; };
 		7207105B2C19E19C00DEB707 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207105A2C19E19C00DEB707 /* SettingViewController.swift */; };
@@ -49,7 +48,6 @@
 		72070FD52C146FDE00DEB707 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		72070FD72C1470C600DEB707 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		72070FD92C15790000DEB707 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
-		72070FDB2C157C3D00DEB707 /* SelectPushViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPushViewProtocol.swift; sourceTree = "<group>"; };
 		72070FDD2C1589A500DEB707 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		72070FDF2C15964900DEB707 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7207105A2C19E19C00DEB707 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				72070FCB2C143E4A00DEB707 /* ReuseIdentifierProtocol.swift */,
-				72070FDB2C157C3D00DEB707 /* SelectPushViewProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -287,7 +284,6 @@
 				72070FDE2C1589A500DEB707 /* UIButton+Extension.swift in Sources */,
 				72070FDA2C15790000DEB707 /* PopUpViewController.swift in Sources */,
 				72070FD42C146F7A00DEB707 /* UILabel+Extension.swift in Sources */,
-				72070FDC2C157C3D00DEB707 /* SelectPushViewProtocol.swift in Sources */,
 				72154C8C2C285B6600EEF679 /* UserDefaultsManager.swift in Sources */,
 				72070FB32C14389C00DEB707 /* SceneDelegate.swift in Sources */,
 				72154C942C2860D200EEF679 /* TextFieldPlaceholder.swift in Sources */,
