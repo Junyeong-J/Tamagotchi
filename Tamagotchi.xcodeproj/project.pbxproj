@@ -27,6 +27,12 @@
 		7207105D2C19E23C00DEB707 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207105C2C19E23C00DEB707 /* SettingTableViewCell.swift */; };
 		7207105F2C19ECF500DEB707 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7207105E2C19ECF500DEB707 /* Setting.swift */; };
 		720710622C19F08B00DEB707 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720710612C19F08B00DEB707 /* NicknameViewController.swift */; };
+		72154C8C2C285B6600EEF679 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C8B2C285B6600EEF679 /* UserDefaultsManager.swift */; };
+		72154C8F2C285E0F00EEF679 /* NaviTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C8E2C285E0F00EEF679 /* NaviTitle.swift */; };
+		72154C922C28606800EEF679 /* NicknameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C912C28606800EEF679 /* NicknameTextField.swift */; };
+		72154C942C2860D200EEF679 /* TextFieldPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C932C2860D200EEF679 /* TextFieldPlaceholder.swift */; };
+		72154C962C28636200EEF679 /* NicknameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72154C952C28636200EEF679 /* NicknameError.swift */; };
+		72154C992C28642C00EEF679 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 72154C982C28642C00EEF679 /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +57,11 @@
 		7207105C2C19E23C00DEB707 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		7207105E2C19ECF500DEB707 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		720710612C19F08B00DEB707 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		72154C8B2C285B6600EEF679 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		72154C8E2C285E0F00EEF679 /* NaviTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviTitle.swift; sourceTree = "<group>"; };
+		72154C912C28606800EEF679 /* NicknameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameTextField.swift; sourceTree = "<group>"; };
+		72154C932C2860D200EEF679 /* TextFieldPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldPlaceholder.swift; sourceTree = "<group>"; };
+		72154C952C28636200EEF679 /* NicknameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72154C992C28642C00EEF679 /* Toast in Frameworks */,
 				72070FC92C143C8600DEB707 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +96,9 @@
 		72070FAF2C14389C00DEB707 /* Tamagotchi */ = {
 			isa = PBXGroup;
 			children = (
+				72154C902C28604700EEF679 /* CustomView */,
+				72154C8D2C285DF900EEF679 /* Enum */,
+				72154C8A2C285B5300EEF679 /* Resource */,
 				720710602C19ECFE00DEB707 /* Data */,
 				72070FD22C146F6000DEB707 /* Extension */,
 				72070FCA2C143E2500DEB707 /* Protocol */,
@@ -148,6 +163,32 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		72154C8A2C285B5300EEF679 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				72154C8B2C285B6600EEF679 /* UserDefaultsManager.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		72154C8D2C285DF900EEF679 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				72154C8E2C285E0F00EEF679 /* NaviTitle.swift */,
+				72154C932C2860D200EEF679 /* TextFieldPlaceholder.swift */,
+				72154C952C28636200EEF679 /* NicknameError.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		72154C902C28604700EEF679 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				72154C912C28606800EEF679 /* NicknameTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +207,7 @@
 			name = Tamagotchi;
 			packageProductDependencies = (
 				72070FC82C143C8600DEB707 /* SnapKit */,
+				72154C982C28642C00EEF679 /* Toast */,
 			);
 			productName = Tamagotchi;
 			productReference = 72070FAD2C14389C00DEB707 /* Tamagotchi.app */;
@@ -197,6 +239,7 @@
 			mainGroup = 72070FA42C14389C00DEB707;
 			packageReferences = (
 				72070FC72C143C8600DEB707 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				72154C972C28642C00EEF679 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 72070FAE2C14389C00DEB707 /* Products */;
 			projectDirPath = "";
@@ -224,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72154C962C28636200EEF679 /* NicknameError.swift in Sources */,
 				72070FC52C143BC600DEB707 /* FirstViewController.swift in Sources */,
 				72070FE02C15964900DEB707 /* MainViewController.swift in Sources */,
 				72070FCC2C143E4A00DEB707 /* ReuseIdentifierProtocol.swift in Sources */,
@@ -233,14 +277,18 @@
 				7207105B2C19E19C00DEB707 /* SettingViewController.swift in Sources */,
 				7207105F2C19ECF500DEB707 /* Setting.swift in Sources */,
 				7207105D2C19E23C00DEB707 /* SettingTableViewCell.swift in Sources */,
+				72154C922C28606800EEF679 /* NicknameTextField.swift in Sources */,
 				72070FB12C14389C00DEB707 /* AppDelegate.swift in Sources */,
 				72070FDE2C1589A500DEB707 /* UIButton+Extension.swift in Sources */,
 				72070FDA2C15790000DEB707 /* PopUpViewController.swift in Sources */,
 				72070FD42C146F7A00DEB707 /* UILabel+Extension.swift in Sources */,
 				72070FDC2C157C3D00DEB707 /* SelectPushViewProtocol.swift in Sources */,
+				72154C8C2C285B6600EEF679 /* UserDefaultsManager.swift in Sources */,
 				72070FB32C14389C00DEB707 /* SceneDelegate.swift in Sources */,
+				72154C942C2860D200EEF679 /* TextFieldPlaceholder.swift in Sources */,
 				72070FD12C14456500DEB707 /* FirstTableViewCell.swift in Sources */,
 				72070FCF2C143EA900DEB707 /* FirstCollectionViewCell.swift in Sources */,
+				72154C8F2C285E0F00EEF679 /* NaviTitle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +521,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		72154C972C28642C00EEF679 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -480,6 +536,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 72070FC72C143C8600DEB707 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		72154C982C28642C00EEF679 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 72154C972C28642C00EEF679 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
